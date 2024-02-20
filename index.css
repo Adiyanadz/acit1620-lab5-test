@@ -1,4 +1,12 @@
+body {
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: -50px; /* Negative value of footer height */
+}
 
+ {
+
+}
 /*  BELOW IS FOR THE INDEX.HTML TRACKLIST*/
 #track {
     display: flex;
@@ -24,8 +32,12 @@
   }
 
 /*  BELOW IS FOR THE FOOTER*/
+
   #footheader {
     text-align: center;
+    width: 100%;
+    bottom: 0;
+    position: relative;
 }
 
 .centered {
@@ -73,13 +85,14 @@
 #top h1{
   flex: 1;
   text-align: center;
+  width: 200px; /* Adjust width as needed */
+  margin: 0 auto; /* Center the h1 element */
 }
 
 #links {
   list-style: none; /* Removes bullet points */
   display: flex; /* Displays list items horizontally */
   justify-content: space-between;
-  padding: 1rem;
 }
 
 
@@ -114,35 +127,67 @@
 
 /* about page */
 
-.image-container {
-  position: relative;
-  text-align: center;
-  overflow: hidden; /* Ensure the overlay doesn't overflow */
+.about-section {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+  align-items: center;
+  padding: 20px;
 }
 
-.image-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Cover the entire container */
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-  opacity: 0; /* Initially hidden */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  flex: 1; /* Each image container takes up equal space */
+}
+
+.image-container img.fade {
+  width: 100%;
+  height: auto;
   transition: opacity 0.5s ease;
 }
 
-.image-container:hover::before {
-  opacity: 1; /* Show overlay on hover */
+.image-container:hover img.fade {
+  opacity: 0.5; /* Image fades darker on hover */
 }
 
-.image-text {
+.image-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: add text shadow */
-  z-index: 1; /* Ensure text is above overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
+.image-container:hover .image-overlay {
+  opacity: 1; /* Overlay with text appears on hover */
+}
+
+.image-overlay h2,
+.image-overlay p {
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .about-section {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .image-container {
+    width: 80%; /* Adjust width for mobile */
+    margin-bottom: 20px; /* Add spacing between images */
+  }
+}
+
+
+
+
+  
