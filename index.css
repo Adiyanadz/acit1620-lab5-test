@@ -107,3 +107,42 @@
   width: 200px; /* Set the desired width */
   height: auto; /* Maintain aspect ratio */
 }
+
+
+
+
+
+/* about page */
+
+.image-container {
+  position: relative;
+  text-align: center;
+  overflow: hidden; /* Ensure the overlay doesn't overflow */
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the entire container */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease;
+}
+
+.image-container:hover::before {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: add text shadow */
+  z-index: 1; /* Ensure text is above overlay */
+}
+
