@@ -1,0 +1,109 @@
+
+/*  BELOW IS FOR THE INDEX.HTML TRACKLIST*/
+#track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  #track strong {
+    flex: 1;
+  }
+  
+  #track span:nth-child(2) {
+    flex: 2;
+  }
+  
+  #track span:nth-child(3),
+  #track button {
+    flex: 1;
+    text-align: right;
+    flex: 0 0 auto; /* Ensures the button does not stretch */
+    width: auto; /* Set width to auto */
+  }
+
+/*  BELOW IS FOR THE FOOTER*/
+  #footheader {
+    text-align: center;
+}
+
+.centered {
+    text-align: center;
+}
+
+#listen-now {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#listen-now li {
+    margin: 0 10px; /* Adjust spacing between list items */
+}
+
+/*  BELOW IS FOR THE HEADER LINKS*/
+#links a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Default link color */
+  font-size: 20px;
+}
+
+#links a:hover {
+  color: rgb(78, 46, 47); /* Change color on hover */
+}
+
+
+
+
+
+
+
+
+
+/*  BELOW IS FOR THE HEADER*/
+
+#top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top h1{
+  flex: 1;
+  text-align: center;
+}
+
+#links {
+  list-style: none; /* Removes bullet points */
+  display: flex; /* Displays list items horizontally */
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+
+
+
+
+#about {
+  padding: 20px;
+  border-style: dotted;
+
+}
+#home {
+  padding: 20px;
+  border-style: dotted;
+}
+#store {
+  padding: 20px;
+  border-style: dotted;
+
+}
+
+
+/*  BELOW IS FOR THE STORE*/
+.album-image {
+  width: 200px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+}
