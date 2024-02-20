@@ -75,55 +75,44 @@ body {
 
 
 /*  BELOW IS FOR THE HEADER*/
-
 #top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 5px; /* Adjust as needed */
+  padding: 10px;
+  text-align: center;
 }
 
-#top h1{
-  flex: 1;
-  text-align: center;
-  width: 200px; /* Adjust width as needed */
-  margin: 0 auto; /* Center the h1 element */
+.header-center {
+  margin-bottom: 5px; /* Adjust as needed */
+}
+
+.header-center h1 {
+  margin: 0;
 }
 
 #links {
-  list-style: none; /* Removes bullet points */
-  display: flex; /* Displays list items horizontally */
-  justify-content: space-between;
+  margin-bottom: 10px; /* Adjust as needed */
+  padding: 10px;
+  text-align: center;
 }
 
-
-
-
-
-#about {
-  padding: 20px;
-  border-style: dotted;
-
-}
-#home {
-  padding: 20px;
-  border-style: dotted;
-}
-#store {
-  padding: 20px;
-  border-style: dotted;
-
+#links ul {
+  list-style: none;
+  padding: 0;
 }
 
-
-/*  BELOW IS FOR THE STORE*/
-.album-image {
-  width: 200px; /* Set the desired width */
-  height: auto; /* Maintain aspect ratio */
+#about, #home, #store {
+  display: inline-block; /* Ensure list items are aligned horizontally */
+  padding: 0 5px;
+  border-style: solid;
+  border-color: rgb(161, 159, 159);
+  background-color: grey;
 }
 
-
-
-
+@media (max-width: 768px) {
+  #top, #links {
+    margin-bottom: 0; /* Adjust for mobile layout */
+  }
+}
 
 /* about page */
 
@@ -133,6 +122,7 @@ body {
   align-items: center;
   padding: 20px;
 }
+
 
 .image-container {
   position: relative;
